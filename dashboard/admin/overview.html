@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | HomeTutor</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/site.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" style="background-color: #0F172A; border-right-color: #334155;">
+            <a href="../../index.html" class="logo mb-4" style="color: white;">
+                <i data-lucide="graduation-cap"></i>
+                <span>HomeTutor Admin</span>
+            </a>
+            
+            <nav class="sidebar-menu">
+                <a href="#" data-section="Dashboard Overview" class="sidebar-link active dashboard-link" style="color: white; background: var(--primary-color);">
+                    <i data-lucide="pie-chart"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" data-section="Analytics" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" data-section="Parent Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="users"></i>
+                    <span>Parents</span>
+                </a>
+                <a href="#" data-section="Tutor Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="user-check"></i>
+                    <span>Tutors</span>
+                </a>
+                <a href="#" data-section="Tutor Verification" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="shield-check"></i>
+                    <span>Verifications</span>
+                </a>
+                <a href="#" data-section="Subject Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="book"></i>
+                    <span>Subjects</span>
+                </a>
+                <a href="#" data-section="Grade Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>Grades</span>
+                </a>
+                <a href="#" data-section="Booking Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="calendar"></i>
+                    <span>Bookings</span>
+                </a>
+                <a href="#" data-section="Payment Management" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="dollar-sign"></i>
+                    <span>Payments</span>
+                </a>
+                <a href="#" data-section="Reviews and Ratings" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="star"></i>
+                    <span>Reviews & ratings</span>
+                </a>
+                <a href="#" data-section="Contact Messages" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="messages-square"></i>
+                    <span>Contact messages</span>
+                </a>
+                <a href="#" data-section="Reports" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" data-section="Settings" class="sidebar-link dashboard-link" style="color: #94A3B8;">
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <a href="../../auth/login.html" class="sidebar-link text-danger mt-auto">
+                <i data-lucide="log-out"></i>
+                <span>Logout</span>
+            </a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main" id="dashboard-panel">
+            <header class="d-flex justify-content-between align-items-center mb-5">
+                <div>
+                    <h1>Platform Overview</h1>
+                    <p class="text-muted">General statistics and system health.</p>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <button id="theme-toggle" class="btn btn-sm btn-outline" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+                    <button id="rtl-toggle" class="btn btn-sm btn-outline" aria-label="Toggle RTL layout">RTL</button>
+                    <button class="btn btn-sm btn-outline dashboard-action" data-message="Search tools are ready for a connected admin data service." aria-label="Search"><i data-lucide="search"></i></button>
+                    <button class="btn btn-sm btn-primary dashboard-action" data-message="Your report is ready to export when connected to platform data.">Download Report</button>
+                </div>
+            </header>
+
+            <!-- Admin Stats Grid -->
+            <div class="grid grid-4">
+                <div class="stat-card">
+                    <div class="stat-icon bg-primary-soft"><i data-lucide="users"></i></div>
+                    <div>
+                        <h3 class="mb-0 count-up" data-count="1280">1,280</h3>
+                        <p class="text-muted mb-0" style="font-size: 0.875rem;">Total Users</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-success-soft"><i data-lucide="user-check"></i></div>
+                    <div>
+                        <h3 class="mb-0 count-up" data-count="450">450</h3>
+                        <p class="text-muted mb-0" style="font-size: 0.875rem;">Verified Tutors</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-warning-soft"><i data-lucide="calendar"></i></div>
+                    <div>
+                        <h3 class="mb-0 count-up" data-count="320">320</h3>
+                        <p class="text-muted mb-0" style="font-size: 0.875rem;">Active Bookings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-danger-soft"><i data-lucide="dollar-sign"></i></div>
+                    <div>
+                        <h3 class="mb-0 count-up" data-count="45200" data-prefix="$">$45,200</h3>
+                        <p class="text-muted mb-0" style="font-size: 0.875rem;">Revenue (MTD)</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="card mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div><h3 class="mb-0">Learning activity</h3><p class="text-muted mb-0">Sessions completed · last six months</p></div>
+                    <span class="badge" style="background:rgba(49,87,201,.1);color:var(--primary-color)">+18.4%</span>
+                </div>
+                <div class="chart-bars" role="img" aria-label="Completed sessions rose steadily from January to June">
+                    <div><span style="height:34%"></span><small>Jan</small></div><div><span style="height:50%"></span><small>Feb</small></div><div><span style="height:43%"></span><small>Mar</small></div><div><span style="height:68%"></span><small>Apr</small></div><div><span style="height:78%"></span><small>May</small></div><div><span style="height:94%"></span><small>Jun</small></div>
+                </div>
+            </section>
+
+            <!-- Tutor Verification Table -->
+            <div class="table-container">
+                <div class="p-4 d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0">Pending Verifications</h3>
+                    <a href="#" class="text-primary dashboard-link" data-section="Tutor Verification">Manage All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tutor Name</th>
+                            <th>Applied Subject</th>
+                            <th>Applied Date</th>
+                            <th>Documents</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="d-flex align-items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=32" alt="Tutor" style="border-radius: 50%;">
+                                <span>Emily Chen</span>
+                            </td>
+                            <td>English & History</td>
+                            <td>Nov 15, 2026</td>
+                            <td><a href="#" class="text-primary dashboard-action" data-message="Tutor verification documents are available in the connected admin service."><i data-lucide="file-text" style="width: 14px;"></i> View</a></td>
+                            <td><span class="badge bg-warning-soft">Reviewing</span></td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-primary dashboard-action" data-message="Emily Chen’s verification was approved in this preview.">Approve</button>
+                                    <button class="btn btn-sm btn-outline dashboard-action" data-message="Review noted. Connect the admin service to update tutor status.">Reject</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="d-flex align-items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=32" alt="Tutor" style="border-radius: 50%;">
+                                <span>Michael Brown</span>
+                            </td>
+                            <td>Computer Science</td>
+                            <td>Nov 16, 2026</td>
+                            <td><a href="#" class="text-primary dashboard-action" data-message="Tutor verification documents are available in the connected admin service."><i data-lucide="file-text" style="width: 14px;"></i> View</a></td>
+                            <td><span class="badge bg-warning-soft">Pending</span></td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-primary dashboard-action" data-message="Michael Brown’s verification was approved in this preview.">Approve</button>
+                                    <button class="btn btn-sm btn-outline dashboard-action" data-message="Review noted. Connect the admin service to update tutor status.">Reject</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS Files -->
+    <script src="../../js/core.js"></script>
+    <script src="../../js/site.js"></script>
+    <script>
+        if (window.lucide) lucide.createIcons();
+    </script>
+</body>
+</html>

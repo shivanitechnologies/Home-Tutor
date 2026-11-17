@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse verified home tutors by subject, grade, location, experience and hourly price.">
+  <title>Find a Tutor | HomeTutor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/site.css">
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-container"><a href="index.html" class="logo"><span class="logo-mark"><i data-lucide="book-open-check"></i></span>HomeTutor</a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="find-tutor.html" aria-current="page">Find a Tutor</a><a href="content.html?view=subjects">Subjects</a><a href="content.html?view=how-it-works">How It Works</a><a href="content.html?view=blog">Journal</a><a href="content.html?view=contact">Contact</a><a class="nav-mobile-only" href="auth/login.html">Log in</a><button class="mobile-rtl" type="button" aria-label="Toggle right-to-left layout">RTL layout</button><a href="dashboard/parent/overview.html">Dashboard</a></nav><div class="nav-actions"><button id="theme-toggle" class="btn btn-sm btn-outline" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button><button id="rtl-toggle" class="btn btn-sm btn-outline">RTL</button><a href="auth/login.html" class="btn btn-sm btn-outline">Log in</a><button class="mobile-toggle" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button></div></div></header>
+<main class="container">
+  <section class="content-hero" style="background:none"><span class="eyebrow">A good match changes everything</span><h1>Find your learner’s tutor</h1><p class="muted">Compare experienced educators and find someone who makes learning click.</p></section>
+  <div class="directory-layout">
+    <aside class="filter-sidebar card" aria-label="Tutor filters"><h2>Refine your search</h2>
+      <div class="filter-group"><label for="search-tutor">Tutor or keyword</label><input id="search-tutor" class="filter-input" placeholder="Name, subject or qualification"></div>
+      <div class="filter-group"><label for="filter-subject">Subject</label><select id="filter-subject" class="filter-select"><option value="all">All subjects</option><option>Mathematics</option><option>Science</option><option>English</option><option>Physics</option><option>Chemistry</option><option>Biology</option><option>Computer Science</option><option>Social Studies</option><option>Hindi</option><option>Tamil</option></select></div>
+      <div class="filter-group"><label for="filter-grade">School grade</label><select id="filter-grade" class="filter-select"><option value="all">All grades</option><option>Elementary</option><option>Middle School</option><option>High School</option></select></div>
+      <div class="filter-group"><label for="filter-location">Location</label><input id="filter-location" class="filter-input" placeholder="City, state or country"></div>
+      <div class="filter-group"><label for="filter-price">Maximum hourly price</label><select id="filter-price" class="filter-select"><option value="all">Any price</option><option value="30">Up to $30</option><option value="40">Up to $40</option><option value="50">Up to $50</option><option value="75">Up to $75</option></select></div>
+      <div class="filter-group"><label for="filter-experience">Experience</label><select id="filter-experience" class="filter-select"><option value="all">Any experience</option><option value="3">3+ years</option><option value="5">5+ years</option><option value="10">10+ years</option></select></div>
+      <label class="d-flex gap-2 align-items-center"><input type="checkbox" id="filter-verified"> Verified tutors only</label>
+      <button class="btn btn-outline w-100 mt-3" id="reset-filters" type="button">Clear filters</button>
+    </aside>
+    <section aria-label="Tutor results"><div class="directory-toolbar mb-4"><div><h2>Meet your matches</h2><p class="muted"><span id="tutor-count">0</span> tutors to explore</p></div><label class="muted">Sort <select id="sort-tutors" class="filter-select" style="width:auto;min-width:170px"><option value="recommended">Recommended</option><option value="rating">Top rated</option><option value="price-low">Price: low to high</option></select></label></div><div id="tutor-grid" class="grid grid-2"></div></section>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><a href="index.html" class="logo"><span class="logo-mark"><i data-lucide="book-open-check"></i></span>HomeTutor</a><span>© 2026 HomeTutor Directory</span><a href="content.html?view=contact">Need help finding a tutor?</a></div></div></footer>
+<div class="profile-modal" id="profile-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tutor profile"><div class="profile-modal-card"><button class="modal-close btn btn-sm btn-outline" style="float:right">Close</button><div id="profile-modal-content"></div></div></div>
+<script src="js/core.js"></script><script src="js/data.js"></script><script src="js/site.js"></script><script src="js/filters.js"></script>
+</body></html>
